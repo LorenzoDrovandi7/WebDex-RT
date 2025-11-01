@@ -1,19 +1,27 @@
-import Card from "./components/Card.tsx";
-import Data from "./components/Data.tsx";
-import SearchBar from "./components/SearchBar.tsx";
-import Stats from "./components/Stats.tsx";
+import { useState } from "react";
+import Card from "./components/Card";
+import Data from "./components/Data";
+import SearchBar from "./components/SearchBar";
+import Stats from "./components/Stats";
 
 function App() {
+  const [selectedPokemon, setSelectedPokemon] = useState<string>(""); // nombre o id
+
   return (
     <>
       <nav>
         <img src="src/assets/WebDex-logo.svg" className="logo" />
       </nav>
       <div className="app-container">
-        <Card />
-        <Stats />
-        <Data />
-        <SearchBar />
+        <SearchBar onSelect={setSelectedPokemon} />
+
+        {selectedPokemon && (
+          <>
+            <Card nameOrId={selectedPokemon} />
+            <Stats nameOrId={selectedPokemon} />
+            <Data nameOrId={selectedPokemon} />
+          </>
+        )}
       </div>
     </>
   );
