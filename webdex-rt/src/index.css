@@ -25,11 +25,11 @@ nav {
 
 .app-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 7vw;
-  padding-top: 1vw;
+  margin-top: 4vh;
+  padding-top: 5vw;
   gap: 1.5vw;
 }
 
@@ -39,8 +39,8 @@ section {
 
 .card {
   border: 0.26vw solid black;
-  width: 20vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -49,7 +49,7 @@ section {
 
 .stats {
   border: 0.26vw solid black;
-  width: 10vw;
+  width: 90vw;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -60,17 +60,18 @@ section {
 
 .data {
   border: 0.26vw solid black;
-  width: 40vw;
-  height: 80vh;
+  width: 90vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3vh;
 }
 
 .search-bar {
   border: 0.26vw solid black;
-  width: 20vw;
+  width: 90vw;
   height: 80vh;
 }
 
@@ -95,15 +96,6 @@ section {
   font-size: 4vh;
   margin-top: 2vh;
   margin-bottom: 0;
-}
-
-.pokemon-name-small {
-  font-size: 2vh;
-  margin-top: 19%;
-}
-.pokemon-name-extra-small {
-  font-size: 1.8vh;
-  margin-top: 18%;
 }
 
 .pokemon-type-container {
@@ -138,6 +130,7 @@ section {
   margin: 0 auto;
   margin-top: 2vh;
   border: 0.26vw solid black;
+  background-color: white;
 }
 
 .about-title {
@@ -164,7 +157,7 @@ section {
   justify-content: flex-end;
   background-color: red;
   border: 0.26vw solid black;
-  width: 7.5vw;
+  width: 80vw;
   height: 10.5vh;
 }
 
@@ -256,14 +249,13 @@ h3 {
 }
 
 .evolution-sprite {
-  width: 19vh;
+  width: 10vh;
   height: auto;
   margin-left: 30%;
 }
 
 .evolution-name {
   text-align: center;
-  margin-left: 50%;
 }
 
 .movements-container {
@@ -282,10 +274,10 @@ h3 {
 .movement-item {
   width: 100%;
   margin: 0;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
   height: 10vh;
-  font-size: 2.5vh;
+  font-size: 3vh;
   color: rgb(0, 0, 0);
   border-bottom: 0.26vw solid black;
   text-align: center;
@@ -344,7 +336,7 @@ h3 {
   background-color: white;
   font-size: 3.5vh;
   border: 0.26vw solid black;
-  width: 18vw;
+  width: 80vw;
   text-align: center;
   font-family: "Pixelify Sans", sans-serif;
 }
@@ -353,7 +345,7 @@ h3 {
   background-color: rgb(255, 0, 0);
   font-size: 4vh;
   border: 0.26vw solid black;
-  width: 19vw;
+  width: 81vw;
   text-align: center;
   font-family: "Pixelify Sans", sans-serif;
   transition: background-color 0.3s ease;
@@ -438,4 +430,86 @@ h3 {
 
 .fairy {
   background-color: #ee99ac;
+}
+
+.dragon {
+  background-color: #7038f8;
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 105vh;
+  }
+
+  .data {
+    height: 130vh;
+  }
+
+  .evolution-sprite {
+    width: 13vh;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app-container {
+    margin-top: 6vh;
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  .search-bar {
+    width: 16vw;
+    height: 80vh;
+  }
+
+  .card {
+    width: 20vw;
+    height: 80vh;
+  }
+
+  .stats {
+    width: 12vw;
+    height: 80vh;
+  }
+
+  .data {
+    width: 40vw;
+    height: 80vh;
+  }
+
+  .hp-container-index,
+  .attack-container-index,
+  .defense-container-index,
+  .s-attack-container-index,
+  .s-defense-container-index,
+  .speed-container-index {
+    width: 7vw;
+  }
+
+  .button-selector {
+    height: 80%;
+  }
+
+  .input-search {
+    font-size: 2vh;
+    width: 90%;
+  }
+
+  .search-button {
+    font-size: 2vh;
+    width: 94%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .evolution-sprite {
+    width: 15vh;
+    margin-left: 55%;
+  }
+
+  .evolution-name {
+    margin-top: 3vh;
+    font-size: 3vh;
+    margin-left: 55%;
+  }
 }

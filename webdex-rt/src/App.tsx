@@ -5,23 +5,25 @@ import SearchBar from "./components/SearchBar";
 import Stats from "./components/Stats";
 
 function App() {
-  const [selectedPokemon, setSelectedPokemon] = useState<string>(""); // nombre o id
+  const [selectedPokemon, setSelectedPokemon] = useState<string>("");
 
   return (
     <>
       <nav>
         <img src="src/assets/WebDex-logo.svg" className="logo" />
       </nav>
-      <div className="app-container">
-        <SearchBar onSelect={setSelectedPokemon} />
+      <div className="wrapper">
+        <div className="app-container">
+          <SearchBar onSelect={setSelectedPokemon} />
 
-        {selectedPokemon && (
-          <>
-            <Card nameOrId={selectedPokemon} />
-            <Stats nameOrId={selectedPokemon} />
-            <Data nameOrId={selectedPokemon} />
-          </>
-        )}
+          {selectedPokemon && (
+            <>
+              <Card nameOrId={selectedPokemon} />
+              <Stats nameOrId={selectedPokemon} />
+              <Data nameOrId={selectedPokemon} />
+            </>
+          )}
+        </div>
       </div>
     </>
   );
