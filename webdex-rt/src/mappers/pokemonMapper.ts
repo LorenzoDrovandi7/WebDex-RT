@@ -36,10 +36,11 @@ function extractEvolutions(chain: EvolutionChainRaw["chain"]): { name: string; i
   const evolutions: { name: string; image: string }[] = [];
 
   function traverse(node: EvolutionChainRaw["chain"]) {
-    const idMatch = node.species.url.match(/\/pokemon-species\/(\d+)\//);
+    const species = node.species as { name: string; url: string };
+    const idMatch = species.url.match(/\/pokemon-species\/(\d+)\//);
     const id = idMatch ? idMatch[1] : "0";
     evolutions.push({
-      name: node.species.name,
+      name: species.name,
       image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
     });
 
