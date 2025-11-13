@@ -50,10 +50,6 @@ npm run dev
 
 Then open: http://localhost:5173
 
-## Deploy
-
-Demo link: [WebDex](https://webdex-kappa.vercel.app/)
-
 ## Credits
 
 PokeAPI for providing all the Pokémon data.
